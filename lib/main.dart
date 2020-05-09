@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyBottomNavigation(),
     );
   }
 }
@@ -151,10 +151,11 @@ class _MyBottomNavigationState extends State<MyBottomNavigation> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: Colors.white,
+          selectedItemColor: Colors.blue,
+          backgroundColor: Colors.white,
           onTap: _onItemTapped,
         ),
-        body: _children[_selectedIndex],
+//        body: _children[_selectedIndex],
       ),
     );
   }
