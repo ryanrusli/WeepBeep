@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:weepbeep/home_page.dart';
+import 'package:weepbeep/friends_page.dart';
 
 // my comment
 void main() => runApp(MyApp());
@@ -112,9 +114,10 @@ class MyBottomNavigation extends StatefulWidget {
 }
 
 class _MyBottomNavigationState extends State<MyBottomNavigation> {
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   final List<Widget> _children = [
-
+    HomePage(),
+    FriendPage()
   ];
 
   void _onItemTapped(int index) {
@@ -153,9 +156,9 @@ class _MyBottomNavigationState extends State<MyBottomNavigation> {
           currentIndex: _selectedIndex,
           selectedItemColor: Colors.blue,
           backgroundColor: Colors.white,
-          onTap: _onItemTapped,
+          onTap: _onItemTapped, 
         ),
-//        body: _children[_selectedIndex],
+        body: _children[_selectedIndex],
       ),
     );
   }
